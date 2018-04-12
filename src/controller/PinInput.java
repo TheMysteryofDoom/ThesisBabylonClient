@@ -48,7 +48,7 @@ public class PinInput extends JPanel {
 				pinField.setText("1");
 			}
 		});
-		btnNum1.setBounds(403, 173, 95, 91);
+		btnNum1.setBounds(406, 146, 95, 91);
 		add(btnNum1);
 		
 		JLabel Background = new JLabel("New label");

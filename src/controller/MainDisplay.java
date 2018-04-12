@@ -4,10 +4,13 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class MainDisplay {
 
 	private JFrame frame;
+	private JTextField InputAreaHidden;
+	public String rFInput;
 
 	/**
 	 * Launch the application.
@@ -44,6 +47,11 @@ public class MainDisplay {
 		//frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		InputAreaHidden = new JTextField();
+		InputAreaHidden.setBounds(0, 0, 200, 50);
+		frame.getContentPane().add(InputAreaHidden);
+		InputAreaHidden.setColumns(10);
 		
 		//=======================TestBar
 		JPanel panelDisplay = new PinInput();
