@@ -47,7 +47,7 @@ public class MainDisplay {
 		
 		//=======================TestBar
 		JPanel panelDisplay = new PinInput();
-		panelDisplay.setBounds(0, 0, 628, 353);
+		panelDisplay.setBounds(0, 0, 720, 576);
 		frame.getContentPane().add(panelDisplay);
 		frame.setVisible(true);
 		
