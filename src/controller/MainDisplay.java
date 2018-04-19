@@ -98,7 +98,7 @@ public class MainDisplay {
 	}
 	
 	public static void PinWriter(String input){
-		hiddenInputField.setText(hiddenInputField.getText()+input);
+		hiddenInputField.setText(input);
 		//System.out.println(input);
 		System.out.println(hiddenInputField.getText());
 	}

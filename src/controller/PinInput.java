@@ -11,6 +11,8 @@ import java.awt.event.MouseEvent;
 import controller.MainDisplay;
 import javax.swing.JPasswordField;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class PinInput extends JPanel {
 	private JPasswordField pinField;
@@ -48,7 +50,7 @@ public class PinInput extends JPanel {
 				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"3";
 				pinField.setText(pinInput);
-				MainDisplay.PinWriter("3");
+				MainDisplay.PinWriter(pinInput);
 			}
 		});
 		
@@ -59,7 +61,7 @@ public class PinInput extends JPanel {
 				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"1";
 				pinField.setText(pinInput);
-				MainDisplay.PinWriter("1");
+				MainDisplay.PinWriter(pinInput);
 			}
 		});
 		btnNum1.setOpaque(false);
@@ -76,7 +78,7 @@ public class PinInput extends JPanel {
 				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"2";
 				pinField.setText(pinInput);
-				MainDisplay.PinWriter("2");
+				MainDisplay.PinWriter(pinInput);
 			}
 		});
 		btnNum2.setOpaque(false);
@@ -96,7 +98,7 @@ public class PinInput extends JPanel {
 				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"4";
 				pinField.setText(pinInput);
-				MainDisplay.PinWriter("4");
+				MainDisplay.PinWriter(pinInput);
 			}
 		});
 		btnNum4.setOpaque(false);
@@ -107,6 +109,15 @@ public class PinInput extends JPanel {
 		add(btnNum4);
 		
 		JButton btnNum5 = new JButton("");
+		btnNum5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = pinInput+"5";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
 		btnNum5.setOpaque(false);
 		btnNum5.setContentAreaFilled(false);
 		btnNum5.setBorderPainted(false);
@@ -115,6 +126,15 @@ public class PinInput extends JPanel {
 		add(btnNum5);
 		
 		JButton btnNum6 = new JButton("");
+		btnNum6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = pinInput+"6";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
 		btnNum6.setOpaque(false);
 		btnNum6.setContentAreaFilled(false);
 		btnNum6.setBorderPainted(false);
@@ -123,12 +143,106 @@ public class PinInput extends JPanel {
 		add(btnNum6);
 		
 		JButton btnNum7 = new JButton("");
+		btnNum7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = pinInput+"7";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
 		btnNum7.setOpaque(false);
 		btnNum7.setContentAreaFilled(false);
 		btnNum7.setBorderPainted(false);
 		btnNum7.setBorder(null);
 		btnNum7.setBounds(408, 334, 95, 91);
 		add(btnNum7);
+		
+		JButton btnNum8 = new JButton("");
+		btnNum8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = pinInput+"8";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
+		btnNum8.setOpaque(false);
+		btnNum8.setContentAreaFilled(false);
+		btnNum8.setBorderPainted(false);
+		btnNum8.setBorder(null);
+		btnNum8.setBounds(501, 334, 95, 91);
+		add(btnNum8);
+		
+		JButton btnNum9 = new JButton("");
+		btnNum9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = pinInput+"9";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
+		btnNum9.setOpaque(false);
+		btnNum9.setContentAreaFilled(false);
+		btnNum9.setBorderPainted(false);
+		btnNum9.setBorder(null);
+		btnNum9.setBounds(597, 334, 95, 91);
+		add(btnNum9);
+		
+		JButton btnNum0 = new JButton("");
+		btnNum0.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = pinInput+"0";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
+		btnNum0.setOpaque(false);
+		btnNum0.setContentAreaFilled(false);
+		btnNum0.setBorderPainted(false);
+		btnNum0.setBorder(null);
+		btnNum0.setBounds(501, 428, 95, 91);
+		add(btnNum0);
+		
+		JButton btnClear = new JButton("");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				lblresponseDummy.setText("Response Detected");
+				pinInput = "";
+				pinField.setText(pinInput);
+				MainDisplay.PinWriter(pinInput);
+			}
+		});
+		btnClear.setOpaque(false);
+		btnClear.setContentAreaFilled(false);
+		btnClear.setBorderPainted(false);
+		btnClear.setBorder(null);
+		btnClear.setBounds(408, 428, 95, 91);
+		add(btnClear);
+		
+		JButton btnBackspace = new JButton("");
+		btnBackspace.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				if(pinInput.length()!=0){
+					pinInput = pinInput.substring(0, (pinInput.length()-1));
+					pinField.setText(pinInput);
+					MainDisplay.PinWriter(pinInput);
+				}
+			}
+		});
+		btnBackspace.setOpaque(false);
+		btnBackspace.setContentAreaFilled(false);
+		btnBackspace.setBorderPainted(false);
+		btnBackspace.setBorder(null);
+		btnBackspace.setBounds(597, 428, 95, 91);
+		add(btnBackspace);
 		
 		JLabel Background = new JLabel("");
 		
@@ -148,6 +262,7 @@ public class PinInput extends JPanel {
 		
 	}
 	
-	public static void getNumInput(JButton button){
+	public static void PinCheck(String Pin){
+		//You can convert the PIN into INT or something before running it through database check
 	}
 }
