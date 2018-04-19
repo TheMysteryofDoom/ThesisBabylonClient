@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 public class MainDisplay {
 
 	private JFrame frame;
-	private JPanel panel;
+	private static JPanel panel;
 	private static String state = "1";
 	private static JTextField hiddenInputField = new JTextField();
 	private String rfIDInput;
@@ -92,7 +92,7 @@ public class MainDisplay {
 		panel.add(clientPortal, "3");
 	}
 	
-	private void screenChanger(){
+	private static void screenChanger(){
 		CardLayout cl = (CardLayout)(panel.getLayout());
         cl.show(panel, state);
 	}
@@ -101,6 +101,11 @@ public class MainDisplay {
 		hiddenInputField.setText(input);
 		//System.out.println(input);
 		System.out.println(hiddenInputField.getText());
+	}
+	
+	public static void gotoPortal(){
+		state = "3";
+		screenChanger();
 	}
 
 }

@@ -51,6 +51,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"3";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		
@@ -62,6 +63,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"1";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum1.setOpaque(false);
@@ -79,6 +81,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"2";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum2.setOpaque(false);
@@ -99,6 +102,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"4";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum4.setOpaque(false);
@@ -116,6 +120,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"5";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum5.setOpaque(false);
@@ -133,6 +138,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"6";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum6.setOpaque(false);
@@ -150,6 +156,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"7";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum7.setOpaque(false);
@@ -167,6 +174,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"8";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum8.setOpaque(false);
@@ -184,6 +192,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"9";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum9.setOpaque(false);
@@ -201,6 +210,7 @@ public class PinInput extends JPanel {
 				pinInput = pinInput+"0";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
+				PinCheck(pinInput);
 			}
 		});
 		btnNum0.setOpaque(false);
@@ -263,6 +273,10 @@ public class PinInput extends JPanel {
 	}
 	
 	public static void PinCheck(String Pin){
+		if (Pin.length()==4){
 		//You can convert the PIN into INT or something before running it through database check
+		//Place Database Checking for Pin here. When successful, run the below line.
+			MainDisplay.gotoPortal();
+		}
 	}
 }
