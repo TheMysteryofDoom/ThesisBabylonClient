@@ -26,18 +26,6 @@ public class PinInput extends JPanel {
 		setBounds(0, 0, 720, 576);
 		setLayout(null);
 		
-		JButton btnPageFlowDummy = new JButton("Page Flow Dummy Button");
-		btnPageFlowDummy.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent arg0) {
-			}
-		});
-		btnPageFlowDummy.setBounds(61, 468, 178, 23);
-		add(btnPageFlowDummy);
-		
-		final JLabel lblresponseDummy = new JLabel("Response Dummy");
-		lblresponseDummy.setBounds(191, 99, 142, 64);
-		add(lblresponseDummy);
-		
 		pinField = new JPasswordField();
 		pinField.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		pinField.setBounds(61, 243, 215, 81);
@@ -47,7 +35,7 @@ public class PinInput extends JPanel {
 		btnNum3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
+				//lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"3";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -59,7 +47,7 @@ public class PinInput extends JPanel {
 		btnNum1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
+				//lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"1";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -77,7 +65,7 @@ public class PinInput extends JPanel {
 		btnNum2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
+				//lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"2";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -98,7 +86,6 @@ public class PinInput extends JPanel {
 		btnNum4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"4";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -116,7 +103,6 @@ public class PinInput extends JPanel {
 		btnNum5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"5";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -134,7 +120,6 @@ public class PinInput extends JPanel {
 		btnNum6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"6";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -152,7 +137,6 @@ public class PinInput extends JPanel {
 		btnNum7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"7";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -170,7 +154,6 @@ public class PinInput extends JPanel {
 		btnNum8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"8";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -188,7 +171,6 @@ public class PinInput extends JPanel {
 		btnNum9.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"9";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -206,7 +188,6 @@ public class PinInput extends JPanel {
 		btnNum0.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = pinInput+"0";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
@@ -223,7 +204,6 @@ public class PinInput extends JPanel {
 		JButton btnClear = new JButton("");
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				lblresponseDummy.setText("Response Detected");
 				pinInput = "";
 				pinField.setText(pinInput);
 				MainDisplay.PinWriter(pinInput);
