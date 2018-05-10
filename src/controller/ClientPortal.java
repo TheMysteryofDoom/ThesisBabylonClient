@@ -12,7 +12,7 @@ public class ClientPortal extends JPanel {
 	 * Create the panel.
 	 */
 	public ClientPortal() {
-		setBounds(0, 0, 720, 576);
+		setBounds(0, 0, 960, 768);
 		setLayout(null);
 		
 		JTextPane medicalDisplay = new JTextPane();
@@ -20,15 +20,15 @@ public class ClientPortal extends JPanel {
 		add(medicalDisplay);
 		
 		JButton buttonPrint = new JButton("");
-		buttonPrint.setBounds(531, 86, 148, 147);
+		buttonPrint.setBounds(711, 141, 194, 194);
 		add(buttonPrint);
 		
 		JButton buttonEmail = new JButton("");
-		buttonEmail.setBounds(531, 238, 148, 147);
+		buttonEmail.setBounds(711, 342, 194, 192);
 		add(buttonEmail);
 		
 		JButton buttonOther = new JButton("");
-		buttonOther.setBounds(531, 390, 148, 147);
+		buttonOther.setBounds(711, 540, 194, 198);
 		add(buttonOther);
 		
 		BtnFormat2(buttonEmail);
@@ -36,8 +36,8 @@ public class ClientPortal extends JPanel {
 		BtnFormat3(buttonOther);
 		
 		JLabel background = new JLabel("");
-		background.setIcon(new ImageIcon(ClientPortal.class.getResource("/assets/OnlyPic.png")));
-		background.setBounds(0, 0, 720, 576);
+		background.setIcon(new ImageIcon(ClientPortal.class.getResource("/assets/Screen1.png")));
+		background.setBounds(0, 0, 960, 768);
 		add(background);
 	}
 	
