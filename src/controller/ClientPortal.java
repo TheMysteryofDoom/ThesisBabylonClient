@@ -16,7 +16,7 @@ public class ClientPortal extends JPanel {
 		setLayout(null);
 		
 		JTextPane medicalDisplay = new JTextPane();
-		medicalDisplay.setBounds(20, 118, 443, 416);
+		medicalDisplay.setBounds(39, 185, 544, 525);
 		add(medicalDisplay);
 		
 		JButton buttonPrint = new JButton("");
