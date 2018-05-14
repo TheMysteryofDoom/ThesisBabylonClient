@@ -4,15 +4,21 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-
 import javax.swing.ImageIcon;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import controller.MainDisplay;
+
 import javax.swing.JPasswordField;
+
+import utility.DBSingletonConnection;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.sql.Connection;
 
 public class PinInput extends JPanel {
 	private JPasswordField pinField;
@@ -252,10 +258,18 @@ public class PinInput extends JPanel {
 		
 	}
 	
+	//Database connection from utility
+	Connection connection = DBSingletonConnection.getConnection();
+	
 	public static void PinCheck(String Pin){
 		if (Pin.length()==4){
 		//You can convert the PIN into INT or something before running it through database check
 		//Place Database Checking for Pin here. When successful, run the below line.
+			try{
+				//ResultSet pinRec =
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 			MainDisplay.gotoPortal();
 		}
 	}
