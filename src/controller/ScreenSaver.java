@@ -12,13 +12,13 @@ public class ScreenSaver extends JPanel {
 	 * Create the panel.
 	 */
 	public ScreenSaver() {
-		setBounds(0, 0, 720, 576);
+		setBounds(0, 0, 960, 768);
 		setLayout(null);
 		
 		JLabel background = new JLabel("");
 
-		background.setIcon(new ImageIcon(ScreenSaver.class.getResource("/assets/ScreenSaver.png")));
-		background.setBounds(0, 0, 720, 576);
+		background.setIcon(new ImageIcon(ScreenSaver.class.getResource("/assets/Screen3.png")));
+		background.setBounds(0, 0, 960, 768);
 		add(background);
 	}
 

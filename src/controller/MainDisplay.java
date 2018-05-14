@@ -50,10 +50,10 @@ public class MainDisplay {
 	private void initialize() {
 		//=====================================================
 		frame = new JFrame();
-		frame.setBounds(100, 100, 720, 576);
+		frame.setBounds(100, 100, 960, 768);
 		frame.setAlwaysOnTop(true);
 		frame.setUndecorated(true);
-		//frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+		//frame.setExtendedState(frame.MAXIMIZED_BOTH);
 		//frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -83,7 +83,7 @@ public class MainDisplay {
 		JPanel pinInput = new PinInput();
 		JPanel clientPortal = new ClientPortal();
 		//========================
-		panel.setBounds(0, 0, 720, 576);
+		panel.setBounds(0, 0, 960, 768);
 		frame.getContentPane().add(panel);
 		panel.setLayout(new CardLayout());
 		//Assign Cards to state
