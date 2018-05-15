@@ -19,6 +19,9 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class PinInput extends JPanel {
 	private JPasswordField pinField;
@@ -259,14 +262,23 @@ public class PinInput extends JPanel {
 	}
 	
 	//Database connection from utility
-	Connection connection = DBSingletonConnection.getConnection();
+
 	
 	public static void PinCheck(String Pin){
 		if (Pin.length()==4){
 		//You can convert the PIN into INT or something before running it through database check
 		//Place Database Checking for Pin here. When successful, run the below line.
 			try{
-				//ResultSet pinRec =
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection con = DriverManager
+						.getConnection("jdbc:mysql://localhost:3306/codersofbabylon2","root","");
+				
+				PreparedStatement ps = con.prepareStatement("SELECT * FROM ");
+				
+				//ps.setString(1, );
+				ResultSet rs = ps.executeQuery();
+				
+				
 			}catch(Exception e){
 				e.printStackTrace();
 			}
