@@ -21,5 +21,9 @@ public class ScreenSaver extends JPanel {
 		background.setBounds(0, 0, 960, 768);
 		add(background);
 	}
+	
+	public static void cardChecker(String card){
+		
+	}
 
 }
