@@ -9,6 +9,7 @@ import java.awt.CardLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -53,7 +54,7 @@ public class MainDisplay {
 		frame.setBounds(100, 100, 960, 768);
 		frame.setAlwaysOnTop(true);
 		frame.setUndecorated(true);
-		//frame.setExtendedState(frame.MAXIMIZED_BOTH);
+		frame.setExtendedState(frame.MAXIMIZED_BOTH);
 		//frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -82,6 +83,7 @@ public class MainDisplay {
 		JPanel screenSaver = new ScreenSaver();
 		JPanel pinInput = new PinInput();
 		JPanel clientPortal = new ClientPortal();
+		JPanel printing = new Printing();
 		//========================
 		panel.setBounds(0, 0, 960, 768);
 		frame.getContentPane().add(panel);
@@ -90,6 +92,7 @@ public class MainDisplay {
 		panel.add(screenSaver, "1");
 		panel.add(pinInput, "2");
 		panel.add(clientPortal, "3");
+		panel.add(printing, "4");
 	}
 	
 	private static void screenChanger(){
@@ -105,6 +108,11 @@ public class MainDisplay {
 	
 	public static void gotoPortal(){
 		state = "3";
+		screenChanger();
+	}
+	
+	public static void printArea(){
+		state = "4";
 		screenChanger();
 	}
 
